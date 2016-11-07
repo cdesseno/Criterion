@@ -198,6 +198,7 @@ CR_API int criterion_handle_args(int argc, char *argv[],
         { "tap",             optional_argument, 0, 'T' },
         { "xml",             optional_argument, 0, 'x' },
         { "json",            optional_argument, 0, 'n' },
+        { "custom-json",     optional_argument, 0, 'N' },        
         { "help",            no_argument,       0, 'h' },
         { "list",            no_argument,       0, 'l' },
         { "ascii",           no_argument,       0, 'k' },
@@ -324,6 +325,7 @@ CR_API int criterion_handle_args(int argc, char *argv[],
             case 'T': provider = "tap";  goto provider_def;
             case 'x': provider = "xml";  goto provider_def;
             case 'n': provider = "json"; goto provider_def;
+            case 'N': provider = "custom_json"; goto provider_def;
 
             provider_def: {}
                 const char *path = DEF(optarg, "-");
