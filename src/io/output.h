@@ -32,5 +32,6 @@ void criterion_free_output(void);
 void tap_report(FILE *f, struct criterion_global_stats *stats);
 void xml_report(FILE *f, struct criterion_global_stats *stats);
 void json_report(FILE *f, struct criterion_global_stats *stats);
+void custom_json_report(FILE *f, struct criterion_global_stats *stats);
 
 #endif /* !OUTPUT_H_ */
