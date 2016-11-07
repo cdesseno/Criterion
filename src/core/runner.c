@@ -217,6 +217,8 @@ CR_API struct criterion_test_set *criterion_initialize(void)
     criterion_register_output_provider("tap", tap_report);
     criterion_register_output_provider("xml", xml_report);
     criterion_register_output_provider("json", json_report);
+    // Added support for custom json
+    criterion_register_output_provider("custon_json", custom_json_report);
 
     setup_parent_job();
 
