@@ -56,7 +56,7 @@ int getPassed(struct criterion_test_stats *ts) {
     return (ts->crashed || ts->timed_out)           ? 1
            : ts->test_status == CR_STATUS_FAILED     ? 2
            : ts->test_status == CR_STATUS_SKIPPED    ? 3
-           : 4;
+           : 0;
 }
 
 // Based on src/io/json.c
