@@ -71,7 +71,7 @@ void custom_json_report(FILE *f, struct criterion_global_stats *stats){
         for (struct criterion_test_stats *ts = ss->tests; ts; ts = ts->next) {
             
             fprintf(f, "{\"name\": \"%s\", \"success\": %s, \"description\": \"%s\"}",
-				ts->test->name,  (getPassed(ts) == 4) ? "true" : "false",
+				ts->test->name,  (getPassed(ts) == 0) ? "true" : "false",
 				get_status_string(ts)
             );
             
